@@ -1,0 +1,24 @@
+ALGORITHM Sentence
+VAR
+    str:STRING;
+    i,vow,lenght,word:INTEGER:=0;
+
+BEGIN
+    WHILE(str[i]<>'.') DO
+        lenght:=lenght+1;
+        IF (str[i]='a' OR str[i]='e' OR str[i]='i' OR str[i]='o' OR str[i]='u' OR str[i]='y') THEN
+            vow:=vow+1
+        ELSE_IF (str[i]=' ') THEN
+            word:=word+1
+        END_IF
+        i:=i+1;
+    END_WHILE
+    IF (word<>0) THEN
+        word:=word+1;
+    END_IF
+
+WRITE('The lenght of the Sentence is :' lenght );
+WRITE('The number of vowels is :' vow);
+WRITE('the number of words is :' word);
+
+END
